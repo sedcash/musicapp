@@ -22,7 +22,6 @@ router.get('/callback', function(req, res) {
 
     var code = req.query.code || null;
     var state = req.query.state || null;
-    var storedState = req.cookies ? req.cookies[stateKey] : null;
 
     if (state === null || state !== storedState) {
         res.redirect('/#' +
@@ -30,7 +29,6 @@ router.get('/callback', function(req, res) {
                 error: 'state_mismatch'
             }));
     } else {
-        res.clearCookie(stateKey);
         var authOptions = {
             url: 'https://accounts.spotify.com/api/token',
             form: {
