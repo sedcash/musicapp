@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '0f548ed7dd8c4dc5a6c39562de4135d7'; // Your client id
 var client_secret = 'fc345574f2dc4c8aa96a4eba32ca86d7'; // Your secret
-var redirect_uri = 'http://sedcash.herokuapp.com/users/'; // Your redirect uri
+var redirect_uri = 'http://sedcash.herokuapp.com/users/callback'; // Your redirect uri
 
 
 /* GET home page. */
